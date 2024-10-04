@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <title>J-stack website|| jay-devloper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>J-stack website || jay-devloper</title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: "poppins", sans-serif;
     }
     
     .obj-width {
@@ -81,6 +82,7 @@
         color: white;
         padding: .5rem 1.5rem;
         border-radius: 50px;
+        font-size: 1rem;
     }
     
     #bar {
@@ -142,25 +144,152 @@
     
     .search a {
         position: absolute;
-        top: 5.7px;
-        right: 60px;
+        top: 6px;
+        right: 63px;
     }
     /* feature section */
+    
+    .features {
+        padding: 4rem 0rem;
+    }
+    
+    .features h2 {
+        padding-top: 1rem 0rem;
+    }
     
     .features .fe-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        padding-top: 30px;
+        margin-top: 2.5rem;
     }
     
     .fe-box img {
         width: 70px;
+        padding-top: 1rem;
     }
     
     .features .fe-box div {
         width: 220px;
+    }
+    /* jobs section */
+    
+    .jobs {
+        padding: 2rem 0rem;
+    }
+    
+    .jobs h2 {
+        padding-top: 1rem 0rem;
+    }
+    
+    .jobs .job-id {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        margin-top: 3rem;
+        box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.509);
+        text-align: center;
+    }
+    
+    .jobs .job-id li {
+        padding: 20px 40px;
+        cursor: pointer;
+        color: black;
+    }
+    
+    .jobs .jList {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 1px solid #ccc;
+        align-items: center;
+        justify-items: start;
+        cursor: pointer;
+        color: #000;
+        padding: 2rem 2rem;
+    }
+    
+    .jobs .jList img {
+        width: 40px;
+    }
+    
+    .jobs .jList:hover {
+        background: #ecf3ee;
+    }
+    
+    .jobs .jList.delete {
+        display: none;
+    }
+    
+    .jobs .job-id li.active {
+        background-color: #000000;
+        color: white;
+    }
+    
+    .t-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem 0rem;
+        flex-wrap: wrap;
+    }
+    
+    .t-box img {
+        width: 100px;
+        object-fit: cover;
+    }
+    
+    .team {
+        padding: 0rem;
+    }
+    
+    .team h2+p {
+        padding-bottom: 1rem;
+    }
+    
+    .team-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 3rem;
+    }
+    
+    .team-container img {
+        height: 150px;
+        width: 120px;
+        object-fit: fill;
+    }
+    
+    .team-container .f1-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 200px;
+        border: 1px solid burlywood;
+        padding: 2rem 0rem;
+        margin-top: 3rem;
+    }
+    
+    .f1-box img {
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+    
+    .skill {
+        padding: .8rem .5rem;
+    }
+    
+    #p-btn {
+        color: black;
+        background-color: bisque;
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: .3rem .5rem;
+        font-size: small;
     }
     
     @media (max-width:699px) {
@@ -204,7 +333,7 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            padding: 20px;
+            padding: 20px 0px 40px 0px;
             width: 90%;
         }
         .h-left {
@@ -239,15 +368,80 @@
         }
         .search a {
             position: absolute;
-            top: 5px;
-            right: 21px;
+            top: 6px;
+            right: 22px;
         }
         #g-btn {
             background-color: #1f4a40;
             color: white;
             padding: 0.39rem .8rem;
             border-radius: 50px;
-            font-size: .5rem;
+            font-size: .35rem;
+        }
+        .features .fe-box div {
+            width: 50%;
+            padding: 0px 20px;
+            font-size: .8rem;
+        }
+        .features {
+            font-size: .8rem;
+            margin: 0px 30px;
+        }
+        .fe-box p {
+            font-size: .6rem;
+        }
+        /* jobs section */
+        .jobs {
+            font-size: .8rem;
+            margin: 0px 25px;
+        }
+        .jobs .job-id {
+            position: relative;
+            width: 100%;
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .jobs .job-id li {
+            padding: 20px 15px;
+            text-wrap: nowrap;
+        }
+        .jobs .jList {
+            width: 45%;
+            margin-top: 1rem;
+            grid-gap: 15px;
+            /* text-align: center; */
+            justify-content: center;
+            grid-template-columns: repeat(1, 2fr);
+            padding: 1rem 1rem;
+            justify-content: center;
+        }
+        .jobs-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .t-box {
+            padding: 1.5rem 0rem;
+        }
+        .t-box img {
+            padding: 20px;
+        }
+        .team-container .f1-box {
+            width: 48%;
+            text-align: center;
+            justify-content: space-between;
+            font-size: xx-small;
+            padding-left: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            border-radius: 10px;
+        }
+        .f1-box img {
+            border-radius: 50%;
+            width: 95px;
+            height: 120px;
         }
     }
 </style>
@@ -282,7 +476,7 @@
                 </div>
             </div>
             <div class="h-right">
-                <img src="assest/hero1.png" alt="">
+                <img class="h-img" src="assest/hero1.png" alt="">
             </div>
         </div>
     </div>
@@ -292,7 +486,7 @@
     <div class="features obj-width">
         <h2>Need something done?</h2>
         <p>Most viewed and all time top selling services</p>
-        <div class="fe-box">
+        <div class="fe-box ">
             <div>
                 <img src="assest/fe 1.png" alt="">
                 <h3>Post a job</h3>
@@ -316,16 +510,158 @@
             </div>
         </div>
     </div>
+
+    <!-- job listing section -->
+
+    <section class="jobs obj-width">
+        <h2>Jobs in demand</h2>
+        <p>Most viewed and all time top selling services</p>
+        <ul class="job-id">
+            <li data-target="all">Recent Jobs</li>
+            <li data-target="freelancers">Freelancers</li>
+            <li data-target="fullTime">Full Time</li>
+            <li data-target="partTime">Part time</li>
+        </ul>
+        <div class="jobs-container">
+
+            <li data-item="fullTime" class="jList">
+                <img src="assest/google.png" alt="">
+                <h3>Web Developer</h3>
+                <p>$800-1100/m</p>
+                <span id="key">Full Time</span>
+            </li>
+
+            <li data-item="freelancer" class="jList">
+                <img src="assest/uber.png" alt="">
+                <h3>Freelancers</h3>
+                <p>$800-1100/m</p>
+                <span id="key">Freelancers</span>
+            </li>
+
+            <li data-item="PartTime" class="jList">
+                <img src="assest/linkedin.png" alt="">
+                <h3>Business Accociate</h3>
+                <p>$800-1100/m</p>
+                <span id="key">Part Time</span>
+            </li>
+
+            <li data-item="fullTime" class="jList">
+                <img src="assest/yahoo.png" alt="">
+                <h3>User Experience</h3>
+                <p>$800-1100/m</p>
+                <span id="key">Full Time</span>
+            </li>
+
+        </div>
+
+    </section>
+
+    <!-- brand section -->
+
+    <section class="trust jobs obj-width">
+        <h2>Trusted by the world's best</h2>
+        <p>Most viewed and all time top selling services</p>
+        <div class="t-box">
+            <img src="assest/t1.png" alt="">
+            <img src="assest/t2.png" alt="">
+            <img src="assest/t3.png" alt="">
+            <img src="assest/t4.png" alt="">
+            <img src="assest/t5.png" alt="">
+            <img src="assest/t6.png" alt="">
+
+        </div>
+    </section>
+
+    <!-- team section -->
+
+    <section class="team jobs obj-width">
+        <h2>Highest Rated Freelancer</h2>
+        <p>Most viewed and all time top selling services</p>
+        <div class="team-container">
+            <div class="f1-box">
+                <img src="assest/fl-3.png" alt="">
+                <h3>Devnarayan Dangi</h3>
+                <div class="skill">
+                    <span id="key">HTML</span>
+                    <span id="key">CSS</span>
+                    <span id="key">JS</span>
+                </div>
+                <a id="p-btn" href="">Viewed profile</a>
+
+            </div>
+
+            <div class="f1-box">
+                <img src="assest/fl-1.png" alt="">
+                <h3>Anuand pathak</h3>
+                <div class="skill">
+                    <span id="key">HTML</span>
+                    <span id="key">CSS</span>
+                    <span id="key">JS</span>
+                </div>
+                <a id="p-btn" href="">Viewed profile</a>
+
+            </div>
+            <div class="f1-box">
+                <img src="assest/f1-5.jpg" alt="">
+                <h3>Jayesh Makwana</h3>
+                <div class="skill">
+                    <span id="key">HTML</span>
+                    <span id="key">CSS</span>
+                    <span id="key">JS</span>
+                </div>
+                <a id="p-btn" href="">Viewed profile</a>
+
+            </div>
+
+            <div class="f1-box">
+                <img src="assest/f1-4.jpg" alt="">
+                <h3>Harsh kansana</h3>
+                <div class="skill">
+                    <span id="key">HTML</span>
+                    <span id="key">CSS</span>
+                    <span id="key">JS</span>
+                </div>
+                <a id="p-btn" href="">Viewed profile</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!---------footer section-------->
+
+    <footer class="footer">
+        <div class="obj-width">
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
 </body>
+
 <script>
     const bar = document.getElementById("bar");
     const menu = document.getElementById("menu");
+    // const sortBtns = document.querySelectorAll(".job-id>*");
+    // sortBtns.forEach(function(btn) {
+    //     btn.addEventListener("click", () => {
+    //         btn.forEach((btn) => btn.classList.remove("active"));
+    //         btn.classList.add("active");
+    //     });
+    // });
 
     if (bar) {
         bar.addEventListener("click", () => {
             menu.classList.toggle("active")
         });
     }
+
+
+    // gsap
 </script>
 
 </html>
