@@ -22,7 +22,7 @@ function page1Animetion() {
         opacity: 0,
     }, "-=1.5")
 }
-// page1Animetion();
+ page1Animetion();
 
 gsap.from(".features h2,.features .p2", {
     x: -30,
