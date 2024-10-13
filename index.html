@@ -90,6 +90,133 @@
         color: rgb(0, 0, 0);
         font-size: larger;
     }
+    /* join section */
+    
+    .join-section {
+        position: relative;
+    }
+    
+    .container {
+        display: none;
+        position: absolute;
+        top: -10px;
+        left: 35%;
+        z-index: 2;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        height: 96vh;
+        ;
+    }
+    
+    .join-section {
+        display: none;
+        background: #28a745;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .container i {
+        font-size: large;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+    
+    .container h1 {
+        padding-top: 15px;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 18px;
+    }
+    
+    .container p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-right: 7px;
+    }
+    
+    .container input {
+        width: 96%;
+        padding: 7px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 11px;
+    }
+    
+    .sub-btn {
+        width: 50%;
+        padding: 7px 0px;
+        margin-top: 5px;
+        margin-left: 102px;
+        border-radius: 5px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    button:hover {
+        background-color: #218838;
+    }
+    
+    .social-login p {
+        margin: 10px 0;
+        font-size: 11px;
+    }
+    
+    .social-btn {
+        width: 30%;
+        margin: 5px;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 7px;
+    }
+    
+    .google {
+        background-color: #db4437;
+    }
+    
+    .linkedin {
+        background-color: #0077b5;
+    }
+    
+    .facebook {
+        background-color: #4267b2;
+    }
+    
+    .container .terms {
+        margin-top: 6px;
+        color: #666;
+        font-size: 9px;
+        line-height: 13px;
+    }
+    
+    .container .terms a {
+        color: blue;
+        font-size: 11px;
+        line-height: 15px;
+        text-decoration: underline;
+    }
     /* hero section */
     
     .hero {
@@ -144,7 +271,7 @@
     
     .search a {
         position: absolute;
-        top: 6px;
+        top: 10px;
         right: 63px;
     }
     /* feature section */
@@ -268,15 +395,18 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        width: 200px;
+        width: 250px;
         border: 1px solid burlywood;
+        flex-direction: column;
         padding: 2rem 0rem;
         margin-top: 3rem;
+        border-radius: 10px;
     }
     
     .f1-box img {
         border-radius: 50%;
         margin-bottom: 1rem;
+        width: 150px;
     }
     
     .skill {
@@ -290,6 +420,58 @@
         border-radius: 30px;
         padding: .3rem .5rem;
         font-size: small;
+    }
+    /* footer section */
+    
+    .footer {
+        background-color: #1f4a40;
+        color: white;
+        padding: 4rem 2rem;
+    }
+    
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .top .logo {
+        width: 170px;
+        margin-bottom: 1rem;
+    }
+    
+    .top i {
+        color: white;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+    
+    .bottom {
+        padding-top: 2.5rem;
+        display: flex;
+        text-align: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .bottom div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bottom h3 {
+        font-weight: 700;
+        font-size: large;
+        padding-bottom: 1rem;
+    }
+    
+    .bottom a {
+        text-decoration: none;
+        color: white;
+        font-size: small;
+        line-height: 35px;
+        font-weight: 400;
     }
     
     @media (max-width:699px) {
@@ -368,7 +550,6 @@
         }
         .search a {
             position: absolute;
-            top: 6px;
             right: 22px;
         }
         #g-btn {
@@ -431,17 +612,125 @@
         .team-container .f1-box {
             width: 48%;
             text-align: center;
-            justify-content: space-between;
-            font-size: xx-small;
-            padding-left: 1rem;
-            margin-top: 1rem;
             display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            font-size: 0.9rem;
+            margin-top: 0.7rem;
             border-radius: 10px;
+            padding: 15px 0px;
         }
         .f1-box img {
             border-radius: 50%;
             width: 95px;
             height: 120px;
+        }
+        #p-btn {
+            font-size: 0.6rem;
+            padding: 0.2rem 0.2rem;
+        }
+        .bottom {
+            padding: 0rem;
+        }
+        .bottom div {
+            width: 50%;
+            margin: 1rem 0rem;
+        }
+        .top i {
+            padding: 1.5rem 0rem;
+            margin: 1rem 1rem 0 0;
+        }
+    }
+    /* join section */
+    
+    @media (max-width:699px) {
+        .container {
+            width: 100%;
+            max-width: 250px;
+            margin: 25px auto;
+            background: white;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            height: 600px;
+            position: absolute;
+            left: 40px;
+            z-index: 3;
+        }
+        input {
+            width: 85%;
+            padding: 7px;
+            margin-left: 10px;
+            margin-top: 0px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 11px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: medium;
+        }
+        p {
+            color: #666;
+            font-size: small;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .sub-btn {
+            width: 50%;
+            padding: 5px 0px;
+            margin-top: 7px;
+            margin-left: 65px;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .social-login {
+            margin: 10px 0;
+        }
+        .social-btn {
+            width: 25%;
+            margin: 2px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 9px;
+            padding: 5px 0px;
+        }
+        .google {
+            background-color: #db4437;
+        }
+        .linkedin {
+            background-color: #0077b5;
+        }
+        .facebook {
+            background-color: #4267b2;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .terms {
+            margin-top: 10px;
+            color: #666;
+            font-size: 8px;
+        }
+        body {
+            display: block;
+        }
+        .join-section {
+            position: relative;
+            padding-bottom: 100px;
+            height: 700px;
         }
     }
 </style>
@@ -462,6 +751,32 @@
             <i class="fa-sharp fa-solid fa-bars" id="bar"></i>
         </div>
     </header>
+    <!-- join section -->
+    <div class="join-section">
+        <div class="container">
+            <i class="fa-solid fa-xmark" id="close-nbtn"></i>
+            <h1>Join Now to Find Your Dream Job</h1>
+            <p>Sign up to explore thousands of job opportunities</p>
+
+            <form id="signupForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="tel" id="phone" placeholder="Phone Number (Optional)">
+                <input type="file" id="resume" accept=".pdf,.doc,.docx">
+                <button class="sub-btn" type="submit">Join Now</button>
+            </form>
+
+            <div class="social-login">
+                <p>Or sign up with:</p>
+                <button class="social-btn google">Google</button>
+                <button class="social-btn linkedin">LinkedIn</button>
+                <button class="social-btn facebook">Facebook</button>
+            </div>
+
+            <p class="terms">By signing up, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</p>
+        </div>
+    </div>
 
     <!---------- hero section ----------->
 
@@ -485,7 +800,7 @@
 
     <div class="features obj-width">
         <h2>Need something done?</h2>
-        <p>Most viewed and all time top selling services</p>
+        <p class="p2">Most viewed and all time top selling services</p>
         <div class="fe-box ">
             <div>
                 <img src="assest/fe 1.png" alt="">
@@ -592,7 +907,7 @@
 
             <div class="f1-box">
                 <img src="assest/fl-1.png" alt="">
-                <h3>Anuand pathak</h3>
+                <h3>Anurag pathak</h3>
                 <div class="skill">
                     <span id="key">HTML</span>
                     <span id="key">CSS</span>
@@ -631,6 +946,44 @@
 
     <footer class="footer">
         <div class="obj-width">
+            <div class="top">
+                <div>
+                    <img src="assest/logo.png" class="logo">
+                    <p>search your desiered jobs.</p>
+                </div>
+                <div>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div>
+                    <h3>Project</h3>
+                    <a href="#">Bookstore</a>
+                    <a href="#">Musicstar</a>
+                    <a href="#">NewsWeb</a>
+                    <a href="#">Kishanagrolistic</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="#">Youtube</a>
+                    <a href="#">Github</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Projects</a>
+                </div>
+                <div>
+                    <h3>Help</h3>
+                    <a href="#">Support</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div>
+                    <h3>Others</h3>
+                    <a href="#">Terms of Services</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
 
         </div>
     </footer>
@@ -659,9 +1012,50 @@
             menu.classList.toggle("active")
         });
     }
+    // joine now page
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const phone = document.getElementById('phone').value;
+        const resume = document.getElementById('resume').files[0];
+
+        if (!fullName || !email || !password) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        alert('Thank you for signing up, ' + fullName + '!');
+
+        document.getElementById('signupForm').reset();
+    });
+
+    // join now button
+    const container = document.querySelector(".container");
+    const joinsec = document.querySelector(".join-section");
+    const body = document.querySelector("body");
+    const navbar = document.querySelector("#navbar");
+    document.querySelector("#close-nbtn").addEventListener("click", () => {
+        container.style.display = "none";
+        joinsec.style.display = "none";
+        body.style.position = "relative";
+        navbar.style.display = "flex";
+    })
 
 
-    // gsap
+    const nbtn = document.querySelector("#n-btn");
+    nbtn.addEventListener("click", myfunction);
+
+    function myfunction() {
+        if (container.style.display = "none") {
+            container.style.display = "block";
+            joinsec.style.display = "block";
+            body.style.position = "obsalute";
+            navbar.style.display = "none";
+        }
+    };
 </script>
 
 </html>
